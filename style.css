@@ -1,0 +1,160 @@
+:root {
+    --primary-red:hsl(0, 78%, 62%);
+    --primary-cyan:hsl(180, 62%, 55%);
+    --primary-orange:hsl(34, 97%, 64%);
+    --primary-blue:hsl(212, 86%, 64%);
+    --neutral-dark-blue:hsl(234, 12%, 34%);
+    --neutral-grayish-blue: hsl(229, 6%, 66%);
+    --neutral-light-gray:hsl(0, 0%, 98%);
+    --font-family:'Poppins', sans-serif;
+    --fw-regular:200;
+    --fw-bold:600;
+    --fw-black:800;
+    --fs-200:0.75rem;
+    --fs-400:1.5rem;
+    --fs-600:3rem;
+  }
+
+  
+  *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+  * {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+  p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin:0;
+  display:flex;
+  flex-wrap:wrap;
+  overflow-y: scroll;
+}
+
+.top {
+  display:flex;
+  flex-basis: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  margin:auto;
+  margin-top:2rem;
+  padding:0 2rem;
+
+}
+
+.top .intro {
+  margin:0;
+  padding:1rem 2rem;
+
+}
+.main {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.grid {
+  margin:auto;
+  padding:2rem; 
+}
+
+.karma, .supervisor,.team-builder , .calculator {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  max-width:100%;
+  height:auto;
+  border-radius:0.25rem;
+  padding:2rem;
+  box-shadow: 1rem 1rem 1rem var(--neutral-grayish-blue);
+  margin-top:2rem;
+}
+
+.karma {
+  border-top:0.25rem solid var(--primary-orange);
+}
+
+.supervisor {
+  border-top:0.25rem solid var(--primary-cyan);
+}
+
+.team-builder {
+  border-top:0.25rem solid var(--primary-red);
+}
+
+.calculator {
+  border-top:0.25rem solid var(--primary-blue);
+  margin-bottom:4rem;
+}
+
+
+.title {
+    color:var(--neutral-dark-blue);
+}
+
+.intro {
+  color:var(--neutral-grayish-blue);
+  font-size: var(--fs-200);
+}
+
+.heading h1 {
+  font-weight:var(--fw-regular);
+  color:var(--neutral-dark-blue);
+}
+
+.strong-line {
+  font-weight: var(--fw-bold);
+  color:var(--neutral-dark-blue);
+  font-size:var(--fs-400)
+}
+
+.icon {
+  max-width:5rem;
+  margin-left:auto;
+  padding:1em;
+}
+
+@media only screen and (min-width:38rem) {
+.grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:repeat(3,1fr);
+  gap:2rem;
+  
+}
+
+.karma ,.team-builder , .calculator, .supervisor {
+  margin:auto;
+}
+.karma {
+  grid-column: 2;
+}
+
+.calculator {
+  grid-column:3;
+  grid-row:1;
+}
+
+.calculator , .supervisor {
+  position: relative;
+  top:7rem;
+}
+
+}
