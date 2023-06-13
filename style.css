@@ -157,10 +157,11 @@ main {
     width: 100%;
     height: 100%;
     gap: 1rem;
+    max-width:30rem;
   }
 
   .calculator {
-    margin-bottom= 0;
+    margin-bottom:0;
     grid-column: 3;
     grid-row: 1;
     transform: translateY(50%);
